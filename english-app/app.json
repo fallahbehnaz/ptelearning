@@ -1,0 +1,37 @@
+{
+  "expo": {
+    "name": "Ptelearning",
+    "slug": "ptelearning",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "backgroundColor": "#4F46E5"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.yourname.ptelearning"
+    },
+    "android": {
+      "package": "com.yourname.ptelearning",
+      "adaptiveIcon": {
+        "backgroundColor": "#4F46E5"
+      }
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-speech-recognition",
+        {
+          "microphonePermission": "این اپ برای بررسی تلفظ به میکروفون دسترسی نیاز داره.",
+          "speechRecognitionPermission": "این اپ برای تشخیص گفتار شما به این مجوز نیاز داره.",
+          "androidSpeechServicePackages": ["com.google.android.googlequicksearchbox"]
+        }
+      ]
+    ]
+  }
+}
