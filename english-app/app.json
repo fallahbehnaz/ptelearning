@@ -8,6 +8,9 @@
     "splash": {
       "backgroundColor": "#4F46E5"
     },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.yourname.ptelearning"
@@ -19,18 +22,15 @@
       }
     },
     "web": {},
-    "extra": {
-      "eas": {
-        "projectId": "25a51301-0410-448c-b2e3-3d608ba20988"
-      }
-    },
     "plugins": [
       [
         "expo-speech-recognition",
         {
           "microphonePermission": "این اپ برای بررسی تلفظ به میکروفون دسترسی نیاز داره.",
           "speechRecognitionPermission": "این اپ برای تشخیص گفتار شما به این مجوز نیاز داره.",
-          "androidSpeechServicePackages": ["com.google.android.googlequicksearchbox"]
+          "androidSpeechServicePackages": [
+            "com.google.android.googlequicksearchbox"
+          ]
         }
       ]
     ]
