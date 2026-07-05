@@ -16,6 +16,7 @@ export default function NumbersHomeScreen({ navigation }) {
 
   const choiceBest = progress.choice?.best;
   const typingBest = progress.typing?.best;
+  const speakingBest = progress.speaking?.best;
 
   return (
     <SafeAreaView style={styles.container}>
@@ -51,6 +52,18 @@ export default function NumbersHomeScreen({ navigation }) {
           <Text style={styles.cardSubtitle}>عدد رو گوش کن و با رقم بنویسش</Text>
           {typingBest != null && (
             <Text style={styles.bestScore}>بهترین امتیاز: {typingBest}/10</Text>
+          )}
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={[styles.card, { backgroundColor: '#FEE2E2' }]}
+          activeOpacity={0.85}
+          onPress={() => navigation.navigate('NumberSpeaking')}
+        >
+          <Text style={styles.emoji}>🎤</Text>
+          <Text style={[styles.cardTitle, { color: '#B91C1C' }]}>بخوان و بگو</Text>
+          <Text style={styles.cardSubtitle}>عدد رو ببین و با صدای بلند بخون</Text>
+          {speakingBest != null && (
+            <Text style={styles.bestScore}>بهترین امتیاز: {speakingBest}/10</Text>
           )}
         </TouchableOpacity>
       </View>

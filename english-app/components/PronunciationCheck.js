@@ -16,7 +16,7 @@ function normalize(str) {
 
 // دکمه‌ی میکروفون: صدای کاربر رو می‌گیره، به متن تبدیل می‌کنه
 // و با متن هدف (target) مقایسه می‌کنه تا بگه درست تلفظ کرده یا نه
-export default function PronunciationCheck({ target, light = false }) {
+export default function PronunciationCheck({ target, light = false, onResult }) {
   const [listening, setListening] = useState(false);
   const [result, setResult] = useState(null); // { correct, heard, error }
 
@@ -24,7 +24,9 @@ export default function PronunciationCheck({ target, light = false }) {
   useSpeechRecognitionEvent('end', () => setListening(false));
   useSpeechRecognitionEvent('result', (event) => {
     const heard = event.results?.[0]?.transcript || '';
-    setResult({ correct: normalize(heard) === normalize(target), heard });
+    const isCorrect = normalize(heard) === normalize(target);
+    setResult({ correct: isCorrect, heard });
+    if (onResult) onResult(isCorrect, heard);
   });
   useSpeechRecognitionEvent('error', (event) => {
     setListening(false);

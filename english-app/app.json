@@ -13,13 +13,20 @@
     ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.yourname.ptelearning"
+      "bundleIdentifier": "com.yourname.ptelearning",
+      "infoPlist": {
+        "NSSpeechRecognitionUsageDescription": "این اپ برای تشخیص گفتار شما به این مجوز نیاز داره.",
+        "NSMicrophoneUsageDescription": "این اپ برای بررسی تلفظ به میکروفون دسترسی نیاز داره."
+      }
     },
     "android": {
       "package": "com.yourname.ptelearning",
       "adaptiveIcon": {
         "backgroundColor": "#4F46E5"
-      }
+      },
+      "permissions": [
+        "android.permission.RECORD_AUDIO"
+      ]
     },
     "web": {},
     "plugins": [
@@ -33,6 +40,11 @@
           ]
         }
       ]
-    ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "25a51301-0410-448c-b2e3-3d608ba20988"
+      }
+    }
   }
 }

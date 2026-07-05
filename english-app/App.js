@@ -10,6 +10,7 @@ import QuizScreen from './screens/QuizScreen';
 import NumbersHomeScreen from './screens/NumbersHomeScreen';
 import NumberChoiceScreen from './screens/NumberChoiceScreen';
 import NumberTypingScreen from './screens/NumberTypingScreen';
+import NumberSpeakingScreen from './screens/NumberSpeakingScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -25,6 +26,7 @@ export default function App() {
         <Stack.Screen name="NumbersHome" component={NumbersHomeScreen} />
         <Stack.Screen name="NumberChoice" component={NumberChoiceScreen} />
         <Stack.Screen name="NumberTyping" component={NumberTypingScreen} />
+        <Stack.Screen name="NumberSpeaking" component={NumberSpeakingScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

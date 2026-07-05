@@ -4,7 +4,6 @@ import * as Speech from 'expo-speech';
 import { generateNumberQuestion, ROUNDS_PER_SESSION } from '../data/numbers';
 import { saveLessonScore } from '../data/progress';
 import SpeakButton from '../components/SpeakButton';
-import PronunciationCheck from '../components/PronunciationCheck';
 
 const NUMBERS_PROGRESS_KEY = 'english_app_progress_numbers';
 
@@ -76,7 +75,6 @@ export default function NumberChoiceScreen({ navigation }) {
       <View style={styles.speakArea}>
         <SpeakButton text={question.correct} size={88} color="#4F46E5" />
         <Text style={styles.instruction}>عدد رو گوش بده و رقمش رو انتخاب کن</Text>
-        <PronunciationCheck target={question.correct} />
       </View>
 
       <View style={styles.options}>
