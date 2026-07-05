@@ -4,12 +4,10 @@
     "slug": "ptelearning",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "splash": {
       "backgroundColor": "#4F46E5"
     },
-    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.yourname.ptelearning"
@@ -20,9 +18,7 @@
         "backgroundColor": "#4F46E5"
       }
     },
- "web": {
-      "favicon": "./assets/favicon.png"
-    },
+    "web": {},
     "extra": {
       "eas": {
         "projectId": "25a51301-0410-448c-b2e3-3d608ba20988"
